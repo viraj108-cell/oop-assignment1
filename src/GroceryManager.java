@@ -28,6 +28,19 @@ public class GroceryManager {
      */
     public static void printInventory(String[] names, double[] prices, int[] stocks) {
         // TODO (Alok): implement this method
+        for (int i = 0; i < names.length; i++) {
+
+            if (names[i] != null) {
+
+                System.out.println("Item: " + names[i]
+                + " | Price: $" + prices[i]
+                + " | Stock: " + stocks[i]);
+
+            } else {
+                // Slot is empty, do nothing
+            }
+        }
+
     }
 
     /**
