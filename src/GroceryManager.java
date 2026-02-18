@@ -38,6 +38,24 @@ public class GroceryManager {
      * @param amount the amount to add to stock
      */
     public static void restockItem(String[] names, int[] stocks, String target, int amount) {
-        // TODO (Biraj): implement this method
+    if (target == null || target.trim().isEmpty()) {
+        System.out.println("Invalid item name.");
+        return;
     }
+    if (amount <= 0) {
+        System.out.println("Amount must be positive.");
+        return;
+    }
+
+    for (int i = 0; i < names.length; i++) {
+        if (names[i] != null && names[i].equalsIgnoreCase(target.trim())) {
+            stocks[i] += amount;
+            System.out.println("Restocked " + names[i] + ". New stock: " + stocks[i]);
+            return;
+        }
+    }
+
+    System.out.println("Item not found: " + target);
+}
+
 }
