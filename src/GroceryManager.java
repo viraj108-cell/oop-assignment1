@@ -17,7 +17,37 @@ public class GroceryManager {
         double[] itemPrices = new double[10];
         int[] itemStocks = new int[10];
 
-        // TODO (John): implement user menu here
+        Scanner Myscanner = new Scanner(System.in);
+
+        while (true)
+        {
+            System.out.println("\n1. View\n2. Restock\n3. Exit");
+            int num = Myscanner.nextInt();
+            Myscanner.nextLine();
+
+            if(num == 1)
+            {
+                printInventory(itemNames, itemPrices, itemStocks);
+            }
+            else if(num ==2)
+            {
+                System.out.println("What Item: ");
+                String Item = Myscanner.nextLine();
+                System.out.println("How many to Restock: ");
+                int amount = Myscanner.nextInt();
+                restockItem(itemNames, itemStocks, Item, amount);
+            }
+            else if(num ==3)
+            {
+                System.out.println("Exiting");
+                break;
+            }
+            else
+            {
+                System.out.println("Invalid Option");
+            }
+        }
+        Myscanner.close();
     }
 
     /**
