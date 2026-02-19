@@ -17,6 +17,19 @@ public class GroceryManager {
         double[] itemPrices = new double[10];
         int[] itemStocks = new int[10];
 
+        // Starter inventory (index-aligned parallel arrays)
+            itemNames[0] = "Apple";   itemPrices[0] = 0.99;  itemStocks[0] = 10;
+            itemNames[1] = "Milk";    itemPrices[1] = 2.49;  itemStocks[1] = 5;
+            itemNames[2] = "Bread";   itemPrices[2] = 1.99;  itemStocks[2] = 8;
+            itemNames[3] = "Eggs";    itemPrices[3] = 3.49;  itemStocks[3] = 12;
+            itemNames[4] = "Rice";    itemPrices[4] = 4.99;  itemStocks[4] = 20;
+            itemNames[5] = "Chicken"; itemPrices[5] = 6.99;  itemStocks[5] = 7;
+            itemNames[6] = "Cheese";  itemPrices[6] = 2.99;  itemStocks[6] = 9;
+            itemNames[7] = "Orange";  itemPrices[7] = 1.29;  itemStocks[7] = 15;
+            itemNames[8] = "Banana";  itemPrices[8] = 0.59;  itemStocks[8] = 25;
+            itemNames[9] = "Yogurt";  itemPrices[9] = 1.49;  itemStocks[9] = 6;
+
+
         Scanner Myscanner = new Scanner(System.in);
 
         while (true)
